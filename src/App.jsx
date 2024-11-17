@@ -5,7 +5,6 @@ import SortIcon from "./assets/sort.svg";
 import AddIcon from "./assets/add.svg";
 import FormModal from "./components/FormModal";
 import Count from "./components/Count";
-import updateLocalStorage from "./util/persistData";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -53,7 +52,6 @@ function App() {
     );
     setTaskList(sortedTask);
     setSortOrder(sortOrder === "desc" ? "asc" : "desc");
-    updateLocalStorage("tasks", sortedTask);
   }
 
   return (
